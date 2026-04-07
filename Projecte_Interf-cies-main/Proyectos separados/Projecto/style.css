@@ -1,0 +1,148 @@
+body {
+    background-color: #ffffff;
+}
+
+.todo {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+
+.portfolio {
+    background-color: #f9f9f9;
+    padding: 25px 15px; 
+    position: relative;
+}
+
+.portfolio::before { /*Flecha*/
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9f9f9;
+}
+
+.texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    display: block;
+}
+
+.paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #a0a0a0;
+    margin: 0;
+}
+
+.boton {
+    background-color: #001d4a;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.bloque2 {
+    /* El truco del overlay: un degradado negro transparente SOBRE la imagen */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/working-housing-project-scaled-1.jpg');
+    
+    background-size: cover;      /* La imagen cubre todo el espacio */
+    background-position: center; /* Centra la foto */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto hace que la imagen se quede quieta al hacer scroll (Parallax) */
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    height: 520px;
+}
+
+.texto2{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+.bloque3{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.formulario{
+    background-color: #001d4a;
+}
+
+.contacto-caja{
+    background-color: #061738;
+    max-width: 400px;
+}
+
+.contacto-icono{
+    font-size: 1.5rem;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.contacto-item{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria suave */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.contacto-titulo{
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.info-bloque{
+    color: white;
+}
+
+.contacto-titulo-principal{
+    color: white;
+    font-weight: bold;
+    margin-top: 15px; /* Ajusta este valor (10px, 20px...) hasta que quede igual */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.formulario-bloque{
+    background-color: white;
+    border-radius: 10px;
+    min-height: 150px;
+}
+.footer{
+    background-color: #d2153d;
+    text-align: center;
+    color: #f9f9f9;
+    padding: 25px 0 25px 0;
+}

@@ -1,0 +1,391 @@
+/* Navbar transparente por defecto */
+.navbar.transparent-header {
+    background-color: transparent !important;
+    transition: all 0.3s ease;
+}
+
+/* Navbar con color al hacer scroll */
+.navbar.transparent-header.shrink {
+    background-color: rgb(0, 33, 91) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links del navbar */
+.navbar-nav .nav-link {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff0000;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+/* Mostrar la barra al pasar el ratón */
+.navbar-nav .nav-link:hover::after {
+    transform: scaleY(1);
+}
+
+/* Excluir el icono de búsqueda del efecto */
+.navbar-nav .nav-link:has(.fa-search)::after {
+    display: none;
+}
+.cabecera {
+    background-image: url("https://arquitecte.oceanwp.org/wp-content/uploads/2023/04/discussing-blueprint-scaled-1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 114vh;
+    margin-top: -115px;
+}
+
+.cabecera::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 33, 91, 0.70) 0%, rgba(210, 21, 61, 0.70) 100%);
+    z-index: 1;
+}
+
+.cabecera-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    min-height: inherit;
+}
+
+.stats-box-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 49rem;
+    max-width: 50%;
+}
+
+.stats-box {
+    background-color: rgba(0, 33, 91, 0.95);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 16rem;
+    width: 100%;
+}
+
+/* MÓVIL: vuelve al flujo normal, ancho completo */
+@media (max-width: 991px) {
+    .stats-box-wrapper {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .stats-box {
+        border-radius: 0;
+    }
+}
+
+#logo {
+    height: 70px;                 
+    transition: all 0.5s ease;    
+}
+
+.navbar.transparent-header.shrink #logo {
+    height: 45px;                 
+}
+
+
+
+.hover-img {
+    transition: transform 1.5s ease, filter 1.5s ease;
+}
+
+.hover-img:hover {
+    transform: scale(0.9);
+}
+
+.hover-icon {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hover-icon:hover {
+    transform: scale(0.9);
+}
+
+
+
+.navbar-link{
+    color: blue;
+    text-align: right;
+}
+
+.icon-outlined {
+    color: #e63946; 
+    background-color: #00215b; 
+    -webkit-text-stroke: 2px #e63946; 
+    -webkit-text-fill-color: #00215b; 
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.todo {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 80px;      /* Espacio superior */
+    padding-bottom: 100px;  /* Espacio inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bloque2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/working-housing-project-scaled-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    padding: 140px 0;
+}
+
+.texto2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* 3. SLIDER - "BEHIND THE SCENE"  */
+#slider-proyectos, .bloque3 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 100px;     /* Bajamos el título para que no esté pegado al bloque oscuro */
+    padding-bottom: 380px;  /* Espacio MASIVO abajo para que entre el formulario */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.bloque1 h1, .bloque3 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px; /* Espacio exacto entre título y fotos */
+}
+
+/* 4. ELEMENTOS DEL PORTFOLIO */
+.portfolio {
+    background-color: #f9f9f9;
+    padding: 25px 15px; 
+    position: relative;
+}
+
+.portfolio::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9f9f9;
+}
+
+.texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #a0a0a0;
+    margin: 0;
+}
+
+.boton {
+    background-color: #001d4a;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 5. SECCIÓN CONTACTO Y FORMULARIO */
+.formulario {
+    background-color: #001d4a;
+    padding-top: 150px;
+    padding-bottom: 0;
+}
+
+.contacto-titulo-principal {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.footer-desc-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Iconos Sociales */
+.social-icons-footer a {
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.social-icons-footer a:hover { color: #d2153d; }
+
+.contact-box-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+.contact-box-item {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Iconos y letra */
+.contact-box-icon { font-size: 1.4rem; color: white; margin-right: 15px; }
+.contact-box-data { color: white; font-size: 14px; }
+.contact-box-data strong { font-size: 16px; margin-bottom: 5px; display: block; }
+
+/* Newsletter */
+.newsletter-footer .form-control {
+    background: transparent;
+    color: white;
+}
+.newsletter-footer .form-control::placeholder { 
+    color: rgba(255, 255, 255, 0.5); 
+    color: white;
+}
+
+/* Formulario Flotante */
+.formulario-bloque {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: -280px;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-submit-final {
+    background-color: #001d4a;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-submit-final:hover { background-color: #d2153d; }
+
+/* Copyright Final */
+.footer-copyright {
+    background-color: #d2153d; /* Rojo como en tu CSS original */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 80px;
+    font-size: 14px;
+}
+
+
+/* 2. Efecto Rojo: Solo se activa si entras al campo */
+.form-control:focus:invalid {
+    border-color: #d2153d; /* Rojo cuando estás dentro y está vacío */
+    box-shadow: 0 0 0 0.2rem rgba(210, 21, 61, 0.1);
+}
+
+
+/* Oscurecer imagen bloque 1 */
+
+/* Contenedor principal */
+.oscurecer {
+    position: relative;
+    display: block;
+    background-color: #000; /* Fondo negro para el efecto */
+    overflow: hidden;
+}
+
+/* Imagen */
+.oscurecer img {
+    display: block;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.enlace {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5); /* Centrado y pequeño */
+    opacity: 0;
+    color: white;
+    font-size: 2.5rem; /* Tamaño del icono */
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
+
+.oscurecer:hover img {
+    opacity: 0.5; /* Oscurece la imagen */
+    transform: scale(1.1); /* Zoom sutil */
+}
+
+.oscurecer:hover .enlace {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Aparece y crece a su tamaño real */
+}
+
+@media (max-width: 991px) {
+    /* 1. Quitamos el margen negativo para que no se suba */
+    .formulario-bloque,
+    .contact-wrapper-subir {
+        margin-top: 0 ;
+        margin-bottom: 30px;
+    }
+
+    /* 2. Damos espacio interno a la sección*/
+    .formulario {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* 3. Ajustamos el contenedor del formulario para que no sea tan gigante en móviles */
+    .formulario-bloque {
+        padding: 25px;
+    }
+
+    /* 4. Aseguramos que el título de CONTACT no quede pegado al bloque de arriba */
+    .contacto-titulo-principal {
+        margin-top: 20px;
+    }
+}
